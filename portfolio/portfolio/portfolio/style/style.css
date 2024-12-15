@@ -1,0 +1,216 @@
+/* Reset básico para garantir consistência no layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Definindo fontes e estilos globais */
+body {
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.7;
+    background-color: #f0f4f8; /* Fundo claro e suave */
+    color: #2c3e50; /* Texto escuro e legível */
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: left;
+    margin-bottom: 30px;
+    background-color: #9b59b6; /* Roxo suave para o fundo */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Alinha imagem e texto */
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff; /* Texto branco para contrastar */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #dfe6e9; /* Texto cinza claro */
+}
+
+header a {
+    color: #fff; /* Link branco */
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Navegação (Barra Lateral) */
+nav {
+    width: 220px;
+    background-color: #9b59b6; /* Mesmo roxo suave */
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Barra lateral à direita */
+    height: calc(100vh - 40px);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra invertida */
+    z-index: 100; /* Garante que a barra lateral não sobreponha o conteúdo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #8e44ad; /* Roxo mais escuro para o hover */
+}
+
+/* Conteúdo Principal */
+main {
+    margin-right: 240px; /* Deixa espaço para a barra lateral (220px + 20px de margem) */
+    width: calc(100% - 240px); /* Ajusta a largura do conteúdo principal para que ocupe o restante da tela */
+    padding: 20px;
+    transition: margin-right 0.3s ease; /* Transição suave ao mudar para dispositivos menores */
+}
+
+/* Seções */
+section {
+    margin-bottom: 50px;
+    background-color: #dfe6e9; /* Fundo suave lilás para as seções */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #2c3e50; /* Cabeçalho escuro para contraste */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #9b59b6; /* Linha roxa para destacar */
+    padding-bottom: 8px;
+}
+
+section p,
+section ul {
+    font-size: 1.1rem;
+    color: #2c3e50; /* Texto escuro para contraste */
+}
+
+section ul {
+    margin-left: 25px;
+}
+
+section ul li {
+    margin-bottom: 12px;
+}
+
+/* Artigos */
+article h3 {
+    font-size: 1.8rem;
+    color: #2c3e50; /* Cabeçalho dos artigos em cor escura */
+}
+
+article h4 {
+    font-size: 1.3rem;
+    color: #8e44ad; /* Cor roxa suave para subtítulos */
+    margin-bottom: 15px;
+}
+
+/* Contato */
+#contato a {
+    color: #9b59b6; /* Link lilás */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff; /* Texto branco */
+    margin-top: 50px;
+    background-color: #8e44ad; /* Fundo roxo mais escuro */
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Responsividade - Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    /* Barra lateral se torna superior, ocupando a largura total */
+    nav {
+        position: static; /* Barra lateral fixa é removida */
+        width: 100%;
+        height: auto;
+        box-shadow: none; /* Remove a sombra da barra lateral */
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-right: 0; /* Remove a margem à direita que era para a barra lateral */
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p,
+    section ul {
+        font-size: 1rem;
+    }
+
+    article h3 {
+        font-size: 1.4rem;
+    }
+
+    article h4 {
+        font-size: 1.1rem;
+    }
+}

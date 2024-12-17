@@ -178,6 +178,83 @@ footer {
     width: 100%;
 }
 
+/* ------------------------------------ */
+/* Estilização do Formulário */
+/* ------------------------------------ */
+
+form {
+    background-color: #dfe6e9; /* Fundo lilás claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Verdana', sans-serif;
+}
+
+form h2 {
+    font-size: 1.8rem;
+    color: #2c3e50; /* Texto escuro */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #9b59b6; /* Linha lilás roxa */
+    padding-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: #2c3e50; /* Texto escuro */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #b2bec3; /* Borda cinza clara */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2c3e50; /* Texto escuro */
+    background-color: #fff; /* Fundo branco */
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #9b59b6; /* Borda lilás ao focar */
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5); /* Efeito de foco */
+}
+
+form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    height: 120px;
+}
+
+form button {
+    background-color: #9b59b6; /* Roxo suave */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #8e44ad; /* Roxo mais escuro ao passar o mouse */
+}
+
+
 /* Responsividade - Ajustes para telas pequenas */
 @media (max-width: 768px) {
     /* Barra lateral se torna superior, ocupando a largura total */

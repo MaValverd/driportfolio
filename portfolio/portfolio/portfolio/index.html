@@ -29,6 +29,7 @@
             <li><a href="#formacao">FORMAÇÃO ACADÊMICA</a></li>
             <li><a href="#idioma">IDIOMA E CURSOS COMPLEMENTARES</a></li>
             <li><a href="#projeto">PROJETOS</a></li>
+            <li><a href="#contato">Fale comigo!</a></li>
         </ul>
     </nav>
     <section id="resumo">
@@ -110,6 +111,28 @@
         <h2>Projetos</h2>
         <a href="https://www.figma.com/proto/CrQRfqzUyLoBjZVd5nLRgl/Untitled?node-id=1-10639&starting-point-node-id=1%3A10639&t=AYmvcUS2bbe8Un4R-1" target="_blank">Building Market</a>
     </section>
+
+    <section id="contato" class="contato">
+        <h2>Entre em contato!</h2>
+        <form onsubmit="enviarMensagem(event)">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo" required>
+                <input type="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-box">
+                <textarea cols="50" rows="8" placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+    
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+            alert("E-mail enviado com sucesso!");
+        }
+    </script>
+    
 
     <footer>
       <p>&copy; 2024 Drielle Alves. Todos os direitos reservados.</p>

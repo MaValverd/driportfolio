@@ -66,13 +66,13 @@ header a:hover {
 
 /* Navegação (Barra Lateral) */
 nav {
-    width: 220px;
+    width: 180px;
     background-color: #9b59b6; /* Mesmo roxo suave */
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     position: fixed;
     top: 20px;
-    right: 20px; /* Barra lateral à direita */
+    right: 10px; /* Barra lateral à direita */
     height: calc(100vh - 40px);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra invertida */
     z-index: 100; /* Garante que a barra lateral não sobreponha o conteúdo */
@@ -105,9 +105,9 @@ nav ul li a:hover {
 
 /* Conteúdo Principal */
 main {
-    margin-right: 240px; /* Deixa espaço para a barra lateral (220px + 20px de margem) */
-    width: calc(100% - 240px); /* Ajusta a largura do conteúdo principal para que ocupe o restante da tela */
-    padding: 20px;
+    margin-right: 200px; /* Deixa espaço para a barra lateral 
+    width: calc(100% - 200px); /* Ajusta a largura do conteúdo principal para que ocupe o restante da tela */
+    padding: 10px;
     transition: margin-right 0.3s ease; /* Transição suave ao mudar para dispositivos menores */
 }
 
